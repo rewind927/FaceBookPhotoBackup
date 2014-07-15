@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_friend_album_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/black" >
+
+        <ImageButton
+            android:id="@+id/btn_tag_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_tag_me"
+            android:visibility="gone" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/btn_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-1dip"
+            android:layout_toRightOf="@+id/btn_tag_me"
+            android:background="@drawable/btn_user_photo"
+            android:visibility="gone" >
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/tx_album_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/btn_download_photo"
+            android:text="羊羊一日遊"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btn_download_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/cb_all_photo"
+            android:background="@drawable/btn_download" />
+
+        <CheckBox
+            android:id="@+id/cb_all_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        style="@style/PhotoGridLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_friend_album_title"
+        android:columnWidth="@dimen/image_thumbnail_size"
+        android:horizontalSpacing="@dimen/image_thumbnail_spacing"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/image_thumbnail_spacing" >
+    </GridView>
+
+</RelativeLayout>

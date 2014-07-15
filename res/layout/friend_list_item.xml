@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants" >
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dip"
+        android:background="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tx_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_toLeftOf="@+id/cb_check_for_download"
+        android:layout_toRightOf="@+id/iv_pic"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:singleLine="false"
+        android:text="哇哇哇一日遊哇哇哇一日遊哇哇哇一日遊哇哇哇一日遊" />
+
+    <TextView
+        android:id="@+id/tx_photo_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx_name"
+        android:layout_marginLeft="5dip"
+        android:layout_toLeftOf="@+id/btn_download"
+        android:layout_toRightOf="@+id/iv_pic"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="927 photo" />
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/cb_check_for_download"
+        android:background="@drawable/navigation_down_button"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/cb_check_for_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+  />
+
+
+    <ProgressBar
+        android:id="@+id/pb_download_per"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_download"
+        android:layout_below="@+id/btn_download"
+        android:max="100"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tx_download_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pb_download_per"
+        android:layout_toRightOf="@+id/pb_download_per"
+        android:text="0%"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black" >
+
+        <ImageButton
+            android:id="@+id/btn_tag_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_tag_me" >
+       </ImageButton>
+        
+
+        <ImageButton
+            android:id="@+id/btn_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btn_tag_me"
+            android:layout_marginLeft="-1dip"
+            android:background="@drawable/btn_user_photo" >
+        </ImageButton>
+        
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="logout" >
+        </Button>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/rl_user_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_prb_download"
+        android:layout_below="@+id/rl_controls" />
+
+    <LinearLayout
+        android:id="@+id/rl_ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_prb_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_ad"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/btn_cancel_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_cancel"
+            android:layout_marginLeft="5dip" />
+        
+        <ProgressBar
+            android:id="@+id/pb_download"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="5dip" 
+            android:layout_toRightOf="@+id/btn_cancel_download" />
+
+        <TextView
+            android:id="@+id/tx_pbr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pb_download"
+            android:layout_marginTop="30dip"
+            android:text="0%" />
+
+        <TextView
+            android:id="@+id/tx_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/pb_download"
+        android:layout_marginTop="30dip"
+            android:text="1/100" />
+        
+</RelativeLayout>
+
+</RelativeLayout>
